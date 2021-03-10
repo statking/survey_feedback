@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+    <meta charset="UTF-8">
+    <title>결과 확인하기</title>
+
+    <!-- 합쳐지고 최소화된 최신 CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+
+    <!-- 부가적인 테마 -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
+
+    <!-- 합쳐지고 최소화된 최신 자바스크립트 -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+
+    <!--link rel="stylesheet", href="{{ url_for('static', filename='css/index.css') }}"-->
+    <link href="static/css/index.css" rel="stylesheet">
+</head>
+    
+<body>
+    <p>
+    <div id="wrap">
+        <!--form action="/result" method="POST">
+            <div class="radio">
+                <label>
+                    <input type="radio" name="input1" id="optionsRadios1" value={{value}} checked>
+                    결과 확인
+                </label>
+            </div>
+            <button action="/result" type="submit" class="btn btn-default">확인</button>
+        </form-->
+        
+        <form action="/result" method="POST">
+            <div class="radio">
+                <label>
+                    <input type="radio" name="input1" id="optionsRadios1" value={{value}} checked>
+                    결과를 보려면 '확인'을 눌러주세요
+                </label>
+            </div>
+            <button action="/result" type="submit" class="btn btn-default">확인</button>
+        </form>
+    </div>
+    </p>
+</body>
+    
+</html>
